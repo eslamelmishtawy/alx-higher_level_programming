@@ -5,6 +5,7 @@
 /**
  * insert_node - insert_node
  * @list: list
+ * @number: n
  *
  * Return: 0
  */
@@ -18,21 +19,10 @@ listint_t *insert_node(listint_t **head, int number)
 		return (NULL);
 
 	new->n = number;
-	new = *head;
-
-	if (h == NULL || h->n >= number)
-	{
-		new->next = h;
-		*head = new;
-		return (new);
-	}
-
 	while (h->next->n < number)
-	{
 		h = h->next;
-	}
-	new->next = h->next;
-	h->next=new;
 
+	new->next = h->next;
+	h->next = new;
 	return (new);
 }
