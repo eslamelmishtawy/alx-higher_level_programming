@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-def islower(c):
-    if ord(c) >= 65 and ord(c) <= 90:
-        return True
-    return False
+def uppercase(str):
+    for i in str:
+        print("{}".format(ord(i) - 32), end='')
+    print()
