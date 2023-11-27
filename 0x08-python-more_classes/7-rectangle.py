@@ -62,7 +62,7 @@ class Rectangle:
 
         for i in range(self.height):
             for j in range(self.width):
-                rectangle.append(self.print_symbol)
+                rectangle.append(str(self.print_symbol))
             rectangle.append("\n")
 
         # remove blank line
