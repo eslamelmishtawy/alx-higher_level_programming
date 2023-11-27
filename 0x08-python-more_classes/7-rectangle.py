@@ -57,12 +57,12 @@ class Rectangle:
     def __str__(self):
         rectangle = []
 
-        if self.width == 0 or self.height == 0 or Rectangle.print_symbol == "":
+        if self.width == 0 or self.height == 0 or self.print_symbol == "":
             return ""
 
         for i in range(self.height):
             for j in range(self.width):
-                rectangle.append(Rectangle.print_symbol)
+                rectangle.append(self.print_symbol)
             rectangle.append("\n")
 
         # remove blank line
