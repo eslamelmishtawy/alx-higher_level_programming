@@ -13,3 +13,25 @@ Adding two strings.
 	Traceback (most recent call last):
 		...
 	TypeError: a must be an integer
+
+Sending only a variable int
+	>>> add_integer(1)
+	99
+
+Sending only b variable as string
+        >>> add_integer(1, "s")
+        Traceback (most recent call last):
+                ...
+        TypeError: b must be an integer
+
+Sending both Bool True
+	>>> add_integer(True, True)
+	2
+
+Sending both Bool False
+        >>> add_integer(False, False)
+        0
+
+Sending a Bool True, Sending b Bool False
+        >>> add_integer(True, False)
+        1
