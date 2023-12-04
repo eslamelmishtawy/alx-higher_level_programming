@@ -4,13 +4,10 @@ My list module
 """
 
 
-class Mylist(list):
+class MyList(list):
     """
     My list class
     """
-    def __init__(self):
-        pass
-
     def print_sorted(self):
         """
         print sorted list

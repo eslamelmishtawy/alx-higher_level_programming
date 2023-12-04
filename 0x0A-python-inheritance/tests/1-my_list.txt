@@ -8,6 +8,6 @@ True
 >>> isinstance(myList, list)
 True
 
->>> myList = Mylist([3,2,1])
+>>> myList = MyList([3,2,1])
 >>> myList.print_sorted()
-[1,2,3]
+[1, 2, 3]
