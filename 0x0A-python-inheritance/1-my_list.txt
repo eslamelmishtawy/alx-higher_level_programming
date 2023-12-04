@@ -1,0 +1,13 @@
+>>> MyList = __import__('1-my_list').MyList
+
+>>> myList = MyList()
+>>> type(myList) == MyList
+True
+
+>>> myList = MyList()
+>>> isinstance(myList, list)
+True
+
+>>> myList = Mylist([3,2,1])
+>>> myList.print_sorted()
+[1,2,3]
