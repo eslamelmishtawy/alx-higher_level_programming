@@ -11,3 +11,21 @@ True
 >>> myList = MyList([3,2,1])
 >>> myList.print_sorted()
 [1, 2, 3]
+
+>>> myList.append(1)
+>>> print(myList)
+[3, 2, 1, 1]
+
+>>> stringList = MyList("string")
+>>> print(stringList)
+['s', 't', 'r', 'i', 'n', 'g']
+
+>>> stringList.print_sorted()
+['g', 'i', 'n', 'r', 's', 't']
+
+>>> emptyList = MyList()
+>>> print(emptyList)
+[]
+
+>>> emptyList.print_sorted()
+[]
