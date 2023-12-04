@@ -3,6 +3,7 @@
 check inherits from module
 """
 
+
 def inherits_from(obj, a_class):
     """
     check if object inherits from class
