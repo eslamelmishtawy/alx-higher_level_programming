@@ -18,18 +18,6 @@ class TestBase_init(unittest.TestCase):
     def tearDownClass(cls):
         print("tearDownClass")
 
-    def test_no_id(self):
-        b1 = Base()
-        b2 = Base()
-        self.assertEqual(b1.id, 3)
-        self.assertEqual(b2.id, 4)
-
-    def test_none_id(self):
-        b1 = Base(None)
-        b2 = Base(None)
-        self.assertEqual(b1.id, 5)
-        self.assertEqual(b2.id, 6)
-
     def test_none_integer_id(self):
         b1 = Base("test")
         self.assertEqual(b1.id, "test")
@@ -40,8 +28,16 @@ class TestBase_init(unittest.TestCase):
         b1 = Base()
         b2 = Base(12)
         b3 = Base()
+        b4 = Base(None)
         self.assertEqual(b1.id, 1)
         self.assertEqual(b2.id, 12)
         self.assertEqual(b3.id, 2)
+        self.assertEqual(b4.id, 3)
         b1.id = 203
         self.assertEqual(b1.id, 203)
+
+    def test_none_id(self):
+        b1 = Base(None)
+        b2 = Base(None)
+        self.assertEqual(b1.id, 4)
+        self.assertEqual(b2.id, 5)

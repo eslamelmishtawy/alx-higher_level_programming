@@ -6,7 +6,7 @@ if __name__ == "__main__":
 
     b1 = Base()
 
-    b2 = Base()
+    b2 = Base(12)
 
     b3 = Base(None)
 
