@@ -1,2 +1,2 @@
---count id = 89
-SELECT count(*) from first_table where `id` = 89;
+--count id of 89
+SELECT count(*) FROM first_table WHERE `id` = 89;
