@@ -18,12 +18,13 @@ if __name__ == '__main__':
 
     cursor = db.cursor()
 
-    sql = """SELECT c.id, c.name, s.name
-        FROM states s, cities c
-        WHERE c.state_id = s.id
-        ORDER BY c.id ASC"""
+    sql = """SELECT cities.name
+          FROM states
+          INNER JOIN cities ON states.id = cities.state_id
+          WHERE states.name = %s
+          ORDER BY cities.id ASC"""
 
-    cursor.execute(sql)
+    cursor.execute(sql, (sys.argv[4],))
 
     data = cursor.fetchall()
 
