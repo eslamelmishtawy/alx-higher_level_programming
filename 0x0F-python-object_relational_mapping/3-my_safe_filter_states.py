@@ -18,9 +18,9 @@ if __name__ == '__main__':
 
     cursor = db.cursor()
 
-    sql = """ SELECT * FROM states
-          WHERE name = %s
-          ORDER BY id ASC """
+    sql = f"SELECT * FROM states
+          WHERE name = str({sys.argv[4]})
+          ORDER BY id ASC"
 
     cursor.execute(sql)
 
