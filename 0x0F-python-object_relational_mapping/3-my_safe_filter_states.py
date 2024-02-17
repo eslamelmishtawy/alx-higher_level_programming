@@ -22,7 +22,7 @@ if __name__ == '__main__':
           WHERE name = %s
           ORDER BY id ASC"""
 
-    cursor.execute(sql, sys.argv[4])
+    cursor.execute(sql, (sys.argv[4],))
 
     data = cursor.fetchall()
 
