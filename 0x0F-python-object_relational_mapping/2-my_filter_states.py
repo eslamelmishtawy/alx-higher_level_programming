@@ -17,10 +17,13 @@ if __name__ == '__main__':
                          port=3306)
 
     cursor = db.cursor()
+    
+    sql = """ SELECT * FROM states
+          WHERE name LIKE BINARY '{}'
+          ORDER BY id ASC """.format(sys.argv[4])
 
-    cursor.execute("""SELECT * FROM states \
-            where name like binary '{}' ORDER BY id ASC""").format(sys.argv[4])
-
+    cursor.execute(sql)
+    
     data = cursor.fetchall()
 
     for row in data:
